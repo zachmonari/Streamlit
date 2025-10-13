@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 st.write("Hello World!")
 
@@ -9,3 +10,5 @@ if click:
 
 st.write("## This is a H2 heading")
 
+data=pd.read_csv("mnist_test.csv")
+st.write(data)
