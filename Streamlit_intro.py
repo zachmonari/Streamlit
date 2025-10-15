@@ -1,7 +1,7 @@
-import numpy as np
-import pandas as pd
+#import numpy as np
+#import pandas as pd
 import streamlit as st
-
+st.logo("ZachTechs.jpg")
 st.title("My Streamlit App")
 st.write("Hello World!:sunglasses:")
 #markdown
@@ -23,7 +23,7 @@ if click:
     st.write("Your favourite movies is ", movie)
 
 st.write("## This is a H2 heading")
-
+"""
 df=pd.read_csv("mnist_test.csv")
 st.write(df)
 #st.dataframe(data)
@@ -51,6 +51,9 @@ st.divider()
 #st.help(st.write)
 st.html("<p>Foo bar.</p>")
 st.metric("Metrics", 43,5)
+data=pd.read_csv("mnist_test.csv")
+st.download_button("Download Data",data)
+"""
 
-
-
+image=st.image("ZachTechs.jpg")
+st.download_button("Download Image",image)
