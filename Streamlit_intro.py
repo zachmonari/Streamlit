@@ -2,6 +2,7 @@
 #import pandas as pd
 import streamlit as st
 from PIL import Image
+from numpy.random import default_rng as rng
 
 logo = Image.open("ZachTechs.jpg")
 st.image(logo,width=150)
@@ -41,6 +42,14 @@ c.write("This will show second")
 col1,col2=st.columns(2)
 col1.write("Column 1")
 col2.write("Column 2")
+
+# vertical alignment bottom
+left, middle, right=st.columns(3, vertical_alignment="bottom")
+left.text_input("Write something")
+click2=middle.button("Click me")
+if click2:
+    st.balloons()
+right.checkbox("Check me")
 
 #modal dialog
 @st.dialog("Sign up")
@@ -97,3 +106,13 @@ with col3:
         image = file.read()
     st.image(image,width=300)
     st.download_button("Download Image", image, file_name="owl.jpg")
+
+# Use commands as container methods
+df=rng(0).standard_normal((10,1))
+col1,col2=st.columns([3,1])
+
+col1.subheader("Column 1 with a chart")
+col1.line_chart(df)
+
+col2.subheader("Column 2 with data")
+col2.write(df)
