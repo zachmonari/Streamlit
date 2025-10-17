@@ -49,3 +49,26 @@ def reg_form():
     email=st.text_input("Enter your email")
 
 reg_form()
+#Expander
+with st.expander("Open to see more"):
+    st.write("More content here")
+
+with st.popover("Settings"):
+    st.checkbox("Completed")
+
+#sidebar
+st.sidebar.write("### Sidebar")
+click1=st.sidebar.button("Click here")
+if click1:
+    st.balloons()
+
+#Tabs
+tab1,tab2=st.tabs(["Tab 1","Tab 2"])
+tab1.write("This is tab 1")
+tab2.write("This is tab 2")
+
+#pages
+
+#from St_pages import Page, show_pages,add_page_title
+#show_pages([Page("Streamlit_App.py","Home",""),Page("Streamlit_App.html","Home",":memory:")])
+#add_page_title("Streamlit_App.py")
