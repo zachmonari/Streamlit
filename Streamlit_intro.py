@@ -72,3 +72,28 @@ tab2.write("This is tab 2")
 #from St_pages import Page, show_pages,add_page_title
 #show_pages([Page("Streamlit_App.py","Home",""),Page("Streamlit_App.html","Home",":memory:")])
 #add_page_title("Streamlit_App.py")
+
+#columns
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.header("A cat")
+    with open("cat.jpg","rb") as file:
+        image = file.read()
+    st.image(image, width=300)
+    st.download_button("Download Image",image,file_name="cat.jpg")
+
+
+with col2:
+    st.header("A dog")
+    with open("dog.jpg","rb") as file:
+        image = file.read()
+    st.image(image, width=300)
+    st.download_button("Download Image", image, file_name="dog.jpg")
+
+with col3:
+    st.header("An owl")
+    with open("owl.jpg", "rb") as file:
+        image = file.read()
+    st.image(image,width=300)
+    st.download_button("Download Image", image, file_name="owl.jpg")
