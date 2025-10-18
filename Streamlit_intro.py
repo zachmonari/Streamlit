@@ -125,3 +125,9 @@ left, middle, right = st.columns(3, vertical_alignment=vertical_alignment)
 left.image("https://static.streamlit.io/examples/cat.jpg")
 middle.image("https://static.streamlit.io/examples/dog.jpg")
 right.image("https://static.streamlit.io/examples/owl.jpg")
+
+left, middle,right=st.columns(3,border=True)
+left.markdown("I love tech"*10)
+middle.markdown("I love engineering"*8)
+right.markdown("I love rice"*4)
+
