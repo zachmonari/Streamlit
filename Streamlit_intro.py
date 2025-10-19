@@ -150,3 +150,8 @@ row2 = st.columns(3)
 for col in row1 + row2:
     tile = col.container(height=120)
     tile.title(":balloon:")
+
+flex = st.container(horizontal=True, horizontal_alignment="right")
+
+for card in range(3):
+    flex.button(f"Button {card + 1}")
