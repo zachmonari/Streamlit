@@ -1,4 +1,4 @@
-#import numpy as np
+import numpy as np
 #import pandas as pd
 import streamlit as st
 from PIL import Image
@@ -131,3 +131,10 @@ left.markdown("I love tech"*10)
 middle.markdown("I love engineering"*8)
 right.markdown("I love rice"*4)
 
+with st.container():
+    st.write("This is inside the container")
+
+    # You can call any Streamlit command, including custom components:
+    st.bar_chart(np.random.randn(50, 3))
+
+st.write("This is outside the container")
