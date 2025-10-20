@@ -52,12 +52,22 @@ if click2:
 right.checkbox("Check me")
 
 #modal dialog
-@st.dialog("Sign up")
-def reg_form():
-    name=st.text_input("Enter your name")
-    email=st.text_input("Enter your email")
+@st.dialog("Cast your vote")
+def vote(item):
+    st.write(f"Why is {item} your favorite?")
+    reason = st.text_input("Because...")
+    if st.button("Submit"):
+        st.session_state.vote = {"item": item, "reason": reason}
+        st.rerun()
 
-reg_form()
+if "vote" not in st.session_state:
+    st.write("Vote for your favorite")
+    if st.button("A"):
+        vote("A")
+    if st.button("B"):
+        vote("B")
+else:
+    f"You voted for {st.session_state.vote['item']} because {st.session_state.vote['reason']}"
 #Expander
 with st.expander("Open to see more"):
     st.write("More content here")
