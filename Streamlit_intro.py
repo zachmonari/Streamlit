@@ -2,6 +2,7 @@ import numpy as np
 #import pandas as pd
 import streamlit as st
 from PIL import Image
+import time
 from numpy.random import default_rng as rng
 
 logo = Image.open("ZachTechs.jpg")
@@ -27,6 +28,15 @@ click=st.button("Click here")
 if click:
     st.write("Your favourite movies is ", movie)
 
+@st.fragment
+def release_the_balloons():
+    st.button("Release the balloons", help="Fragment rerun")
+    st.balloons()
+
+with st.spinner("Inflating balloons..."):
+    time.sleep(5)
+release_the_balloons()
+st.button("Inflate more balloons", help="Full rerun")
 st.write("## This is a H2 heading")
 with open("ZachTechs.jpg","rb") as file:
     image = file.read()
