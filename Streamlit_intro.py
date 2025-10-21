@@ -221,3 +221,22 @@ if not name:
   st.warning('Please input a name.')
   st.stop()
 st.success("Thank you for inputting a name.")
+
+#cache
+"""
+@st.cache_data
+def fetch_and_clean_data(url):
+    # Fetch data from URL here, and then clean it up.
+    return data
+
+d1 = fetch_and_clean_data(DATA_URL_1)
+# Actually executes the function, since this is the first time it was
+# encountered.
+
+d2 = fetch_and_clean_data(DATA_URL_1)
+# Does not execute the function. Instead, returns its previously computed
+# value. This means that now the data in d1 is the same as in d2.
+
+d3 = fetch_and_clean_data(DATA_URL_2)
+# This is a different URL, so the function executes.
+"""
