@@ -214,3 +214,10 @@ def update_value():
     st.session_state.value = "Bar"
 
 st.button("Bar", on_click=update_value)
+
+#Stop
+name = st.text_input("Name")
+if not name:
+  st.warning('Please input a name.')
+  st.stop()
+st.success("Thank you for inputting a name.")
