@@ -198,3 +198,11 @@ st.header(st.session_state.value)
 if st.button("Foo"):
     st.session_state.value = "Foo"
     st.rerun()
+
+##### Option using a container #####
+container = st.container()
+
+if st.button("Baz"):
+    st.session_state.value = "Baz"
+
+container.header(st.session_state.value)
