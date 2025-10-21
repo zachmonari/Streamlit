@@ -187,3 +187,14 @@ flex = st.container(horizontal=True, horizontal_alignment="right")
 
 for card in range(3):
     flex.button(f"Button {card + 1}")
+
+#rerun
+if "value" not in st.session_state:
+    st.session_state.value = "Title"
+
+##### Option using st.rerun #####
+st.header(st.session_state.value)
+
+if st.button("Foo"):
+    st.session_state.value = "Foo"
+    st.rerun()
