@@ -206,3 +206,11 @@ if st.button("Baz"):
     st.session_state.value = "Baz"
 
 container.header(st.session_state.value)
+
+##### Option using a callback #####
+st.header(st.session_state.value)
+
+def update_value():
+    st.session_state.value = "Bar"
+
+st.button("Bar", on_click=update_value)
