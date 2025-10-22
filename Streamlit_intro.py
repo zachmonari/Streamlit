@@ -251,6 +251,22 @@ d2 = fetch_and_clean_data(DATA_URL_1)
 
 d3 = fetch_and_clean_data(DATA_URL_2)
 # This is a different URL, so the function executes.
+
+@st.cache_data
+def get_api_data():
+    data = api.get(...)
+    st.success("Fetched data from API!")  # 👈 Show a success message
+    return data
+
+@st.cache_data
+def show_data():
+    st.header("Data analysis")
+    data = api.get(...)
+    st.success("Fetched data from API!")
+    st.write("Here is a plot of the data:")
+    st.line_chart(data)
+    st.write("And here is the raw data:")
+    st.dataframe(data)
 """
 @st.cache_data
 def foo(bar):
