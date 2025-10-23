@@ -3,6 +3,7 @@ import numpy as np
 import streamlit as st
 from PIL import Image
 import time
+import datetime
 from numpy.random import default_rng as rng
 
 logo = Image.open("ZachTechs.jpg")
@@ -10,6 +11,9 @@ st.image(logo,width=150)
 
 st.title("My Streamlit App")
 st.write("Hello World!:sunglasses:")
+#time
+t = st.time_input("Set an alarm for", datetime.time(11, 45))
+st.write("Alarm is set for", t)
 #markdown
 st.markdown("My first **App**!")
 st.header("My header")
