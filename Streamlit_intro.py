@@ -14,6 +14,9 @@ st.write("Hello World!:sunglasses:")
 #time
 t = st.time_input("Set an alarm for", datetime.time(11, 45))
 st.write("Alarm is set for", t)
+
+d = st.date_input("When's your birthday", datetime.date(2023, 10, 21))
+st.write("Your birthday is:", d)
 #markdown
 st.markdown("My first **App**!")
 st.header("My header")
