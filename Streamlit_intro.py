@@ -303,3 +303,6 @@ if st.button("Clear the cached value of `foo(1)`"):
 
 foo(1)
 foo(2)
+# Add your sign/trademark
+st.markdown("---")
+st.caption("© 2025 ZachTechs | Streamlit Test App")
