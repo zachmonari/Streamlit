@@ -17,6 +17,20 @@ st.write("Alarm is set for", t)
 
 d = st.date_input("When's your birthday", datetime.date(2023, 10, 21))
 st.write("Your birthday is:", d)
+#vacation
+today = datetime.datetime.now()
+next_year = today.year + 1
+jan_1 = datetime.date(next_year, 1, 1)
+dec_31 = datetime.date(next_year, 12, 31)
+
+d = st.date_input(
+    "Select your vacation for next year",
+    (jan_1, datetime.date(next_year, 1, 7)),
+    jan_1,
+    dec_31,
+    format="MM.DD.YYYY",
+)
+
 #markdown
 st.markdown("My first **App**!")
 st.header("My header")
