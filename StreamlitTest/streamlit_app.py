@@ -57,6 +57,7 @@ respond_pages = [respond_1, respond_2]
 admin_pages = [admin_1, admin_2]
 
 st.title("Request manager")
+st.write("Hello, Welcome back!")
 st.logo("images/horizontal_blue.png", icon_image="images/icon_blue.png")
 
 page_dict = {}
@@ -73,3 +74,10 @@ else:
     pg = st.navigation([st.Page(login)])
 
 pg.run()
+st.markdown("---")
+st.markdown(
+    "<div style='text-align: center; color: grey;'>"
+    "💡 Made with ❤️ by <b>ZachTechs</b>"
+    "</div>",
+    unsafe_allow_html=True
+)
